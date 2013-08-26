@@ -38,7 +38,7 @@
 			  destfile="build/WCFSetup.tar.gz"
 		/>
 		<copy todir="build">
-			<fileset dir="${{WCFSetupDir}" includes="*.php" />
+			<fileset dir="${WCFSetupDir}" includes="*.php" />
 		</copy>
 	</target>
 </project>
