@@ -40,6 +40,6 @@
 		<copy todir="build">
 			<fileset dir="${WCFSetupDir}" includes="*.php" />
 		</copy>
-		<zip destfile="build/ultimate1.0.0.b2.zip" basedir="build" />
+		<zip destfile="build/ultimate1.0.0.b2.zip" basedir="build" includes="*.php,*.tar.gz" excludes="*.tar*" />
 	</target>
 </project>
