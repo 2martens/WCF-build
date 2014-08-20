@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Ultimate CMS Standalone" default="build">
-	<property name="UltimateCMSBuildDir" location="../de.plugins-zum-selberbauen.ultimate/build" />
-	<property name="WCFPackagesDir" location="../com.woltlab.wcf/wcfsetup/install/packages" />
-	<property name="WCFSetupDir" location="../com.woltlab.wcf/wcfsetup" />
-	<property name="WCFMetadataDir" location="../com.woltlab.wcf/com.woltlab.wcf" />
+<project name="WCF2.1 Standalone" default="build">
+	<property name="WCFPackagesDir" location="../WCF-2.1/wcfsetup/install/packages" />
+	<property name="WCFSetupDir" location="../WCF-2.1/wcfsetup" />
+	<property name="WCFMetadataDir" location="../WCF-2.1/com.woltlab.wcf" />
 	<target name="clean" description="Deletes old tar files.">
 		<delete failonerror="false">
 			<fileset dir="${WCFPackagesDir}" includes="*ultimate.tar.gz" />
@@ -21,12 +20,6 @@
 		</tar>
 	</target>
 	
-	<target name="move" depends="clean" description="Moves the Ultimate CMS tar.">
-		<copy todir="${WCFPackagesDir}">
-			<fileset dir="${UltimateCMSBuildDir}" includes="*ultimate.tar.gz" />
-		</copy>
-	</target>
-	
 	<target name="build" depends="pack,move" description="Builds the standalone installation.">
 		<tar destfile="build/WCFSetup.tar">
 			<tarfileset dir="${WCFSetupDir}">
@@ -40,7 +33,7 @@
 		<copy todir="build">
 			<fileset dir="${WCFSetupDir}" includes="*.php" />
 		</copy>
-		<zip destfile="build/ultimate1.0.x.zip" basedir="build" includes="*.php,*.tar.gz" excludes="*.tar" />
+		<zip destfile="build/wcf2.1.x.zip" basedir="build" includes="*.php,*.tar.gz" excludes="*.tar" />
 		<delete file="build/WCFSetup.tar" />
 	</target>
 </project>
