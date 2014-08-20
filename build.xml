@@ -20,7 +20,7 @@
 		</tar>
 	</target>
 	
-	<target name="build" depends="pack,move" description="Builds the standalone installation.">
+	<target name="build" depends="pack" description="Builds the standalone installation.">
 		<tar destfile="build/WCFSetup.tar">
 			<tarfileset dir="${WCFSetupDir}">
 				<exclude name="install.php" />
