@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Ultimate CMS Standalone" default="build">
 	<property name="UltimateCMSBuildDir" location="../de.plugins-zum-selberbauen.ultimate/build" />
-	<property name="WCFPackagesDir" location="../com.woltlab.wcf/wcfsetup/install/packages" />
-	<property name="WCFSetupDir" location="../com.woltlab.wcf/wcfsetup" />
-	<property name="WCFMetadataDir" location="../com.woltlab.wcf/com.woltlab.wcf" />
+	<property name="WCFPackagesDir" location="../WCF-2.1/wcfsetup/install/packages" />
+	<property name="WCFSetupDir" location="../WCF-2.1/wcfsetup" />
+	<property name="WCFMetadataDir" location="../WCF-2.1/com.woltlab.wcf" />
 	<target name="clean" description="Deletes old tar files.">
 		<delete failonerror="false">
 			<fileset dir="${WCFPackagesDir}" includes="*ultimate.tar.gz" />
